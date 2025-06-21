@@ -1,0 +1,31 @@
+[workspace]
+default-members = ["crates/core", "crates/cli"]
+members = ["crates/core", "crates/cli", "crates/tui"]
+
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+description = "Corty - AI Native Code Intelligence Platform"
+repository = "https://github.com/corty-ai/corty"
+keywords = ["agents", "llm", "code"]
+categories = []
+
+[workspace.dependencies]
+tokio = { version = "1.45.1", features = ["full"] }
+walkdir = "2.5.0"
+lancedb = { version = "0.20.0", features = ["sentence-transformers", "openai"] }
+tempfile = "3.20.0"
+autoagents = { git = "https://github.com/saivishwak/AutoAgents" }
+clap = { version = "4.5.40", features = ["derive"] }
+color-eyre = "0.6.5"
+env_logger = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dirs = "5.0"
+chrono = { version = "0.4", features = ["serde"] }
+colored = "3.0.0"
+log = "0.4.27"
+strum = "0.27.1"
+strum_macros = "0.27.1"

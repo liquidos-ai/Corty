@@ -1,0 +1,22 @@
+[package]
+name = "corty-cli"
+version.workspace = true
+edition.workspace = true
+description.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+corty-core = { path = "../core" }
+corty-tui = { path = "../tui" }
+tokio = { workspace = true }
+color-eyre = { workspace = true }
+walkdir = { workspace = true }
+clap = { workspace = true }
+env_logger = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+colored = { workspace = true }
+log = { workspace = true }

@@ -1,0 +1,20 @@
+[package]
+name = "corty-core"
+version.workspace = true
+edition.workspace = true
+description.workspace = true
+repository.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+color-eyre = { workspace = true }
+arrow-array = "55.1.0"
+arrow-schema = "55.1.0"
+futures = "0.3.31"
+lancedb = { workspace = true }
+tempfile = { workspace = true }
+autoagents = { workspace = true }
+thiserror = "2.0.12"
+serde.workspace = true
+serde_json.workspace = true
