@@ -9,7 +9,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Corty - AI Native Code Intelligence Platform"
 license = "Apache-2.0"
-repository = "https://github.com/liquidos-ai/corty"
+repository = "https://github.com/liquidos-ai/Corty"
 keywords = ["agents", "llm", "code"]
 categories = []
 
