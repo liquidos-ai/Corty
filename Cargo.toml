@@ -8,6 +8,7 @@ resolver = "2"
 version = "0.1.0"
 edition = "2021"
 description = "Corty - AI Native Code Intelligence Platform"
+license = "Apache-2.0"
 repository = "https://github.com/corty-ai/corty"
 keywords = ["agents", "llm", "code"]
 categories = []
