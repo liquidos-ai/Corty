@@ -15,7 +15,7 @@ categories = []
 
 [workspace.dependencies]
 corty-core = { version = "0.1.0" }
-corty-cli = { version = "0.1.0" }
+corty = { version = "0.1.0" }
 corty-tui = { version = "0.1.0" }
 tokio = { version = "1.45.1", features = ["full"] }
 walkdir = "2.5.0"
@@ -37,5 +37,5 @@ strum_macros = "0.27.1"
 [patch.crates-io]
 autoagents = { git = "https://github.com/liquidos-ai/AutoAgents" }
 corty-core = { path = "./crates/core" }
-corty-cli = { path = "./crates/cli" }
+corty = { path = "./crates/cli" }
 corty-tui = { path = "./crates/tui" }
