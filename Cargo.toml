@@ -14,11 +14,14 @@ keywords = ["agents", "llm", "code"]
 categories = []
 
 [workspace.dependencies]
+corty-core = { version = "0.1.0" }
+corty-cli = { version = "0.1.0" }
+corty-tui = { version = "0.1.0" }
 tokio = { version = "1.45.1", features = ["full"] }
 walkdir = "2.5.0"
 lancedb = { version = "0.20.0", features = ["sentence-transformers", "openai"] }
 tempfile = "3.20.0"
-autoagents = { git = "https://github.com/saivishwak/AutoAgents" }
+autoagents = "0.1.1-alpha.0"
 clap = { version = "4.5.40", features = ["derive"] }
 color-eyre = "0.6.5"
 env_logger = "0.10"
@@ -30,3 +33,9 @@ colored = "3.0.0"
 log = "0.4.27"
 strum = "0.27.1"
 strum_macros = "0.27.1"
+
+[patch.crates-io]
+autoagents = { git = "https://github.com/liquidos-ai/AutoAgents" }
+corty-core = { path = "./crates/core" }
+corty-cli = { path = "./crates/cli" }
+corty-tui = { path = "./crates/tui" }
