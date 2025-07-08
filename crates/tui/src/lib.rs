@@ -36,7 +36,7 @@ pub async fn run_tui() -> Result<()> {
     let (mut terminal, mut mouse_capture) = tui::init()?;
 
     // Create and run the application
-    let mut app = app::App::new();
+    let mut app = app::App::new().await;
     app.run(&mut terminal, &mut mouse_capture).await?;
 
     Ok(())

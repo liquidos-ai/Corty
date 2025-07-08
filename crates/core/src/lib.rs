@@ -1,3 +1,4 @@
+pub mod agent;
 mod config;
 pub mod corty;
 mod error;
