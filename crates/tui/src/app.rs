@@ -6,6 +6,7 @@ use crate::{
         ChatWidget, ChatWidgetState, Toaster, ToasterState, WelcomeWidget,
     },
 };
+use corty_core::corty::Corty;
 use ratatui::{
     crossterm::event::{Event, KeyCode, KeyEvent, KeyModifiers, MouseEvent, MouseEventKind},
     layout::{Constraint, Direction, Layout, Margin},
@@ -40,12 +41,14 @@ pub(crate) struct App<'a> {
     shutdown_flag: Arc<AtomicBool>,
     fullscreen_mode: bool,
     toaster_state: ToasterState,
+    core: Corty,
 }
 
 impl<'a> App<'a> {
-    pub fn new() -> Self {
+    pub async fn new() -> Self {
         let (tx, rx) = channel(100);
         let app_event_tx = AppEventSender::new(tx);
+        let core = Corty::new().await.unwrap();
 
         let shutdown_flag = Arc::new(AtomicBool::new(false));
         let shutdown_flag_clone = shutdown_flag.clone();
@@ -122,6 +125,7 @@ impl<'a> App<'a> {
             shutdown_flag,
             fullscreen_mode: false,
             toaster_state: ToasterState::new(),
+            core,
         }
     }
 

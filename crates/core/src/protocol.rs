@@ -32,11 +32,6 @@ pub enum Op {
         /// User input items, see `InputItem`
         items: Vec<InputItem>,
     },
-
-    AddToHistory {
-        /// The message text to be stored.
-        text: String,
-    },
 }
 
 /// User input
